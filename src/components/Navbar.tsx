@@ -25,7 +25,7 @@ export function Navbar() {
                     <Link href="#" className="hidden md:block text-sm font-medium text-gray-600 hover:text-blue-600">
                         Iniciar Sesión
                     </Link>
-                    <Button>Registrar Colegio</Button>
+                    <Button className="hidden md:inline-flex">Registrar Colegio</Button>
                     <Button variant="ghost" size="icon" className="md:hidden">
                         <Menu className="h-6 w-6" />
                     </Button>

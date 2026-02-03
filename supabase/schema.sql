@@ -21,7 +21,11 @@ create table colegios (
   matricula numeric,
   cuota_ingreso numeric,
   rating_promedio numeric default 0,
-  fotos text[] -- Array de URLs de Cloudinary
+  fotos text[], -- Array de URLs de Cloudinary
+  telefono text,
+  email text,
+  web text,
+  google_maps_url text
 );
 
 -- Usuarios (Extiende la tabla auth.users de Supabase)

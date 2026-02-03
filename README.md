@@ -2,7 +2,7 @@
 
 Este es el repositorio oficial del proyecto **Comparacolegios**. Una plataforma diseñada para ayudar a padres a encontrar y comparar colegios de manera eficiente, centrada en datos y con costo de infraestructura cero inicial.
 
-## 🚀 Stack Tecnológico (Costo $0)
+## Stack Tecnológico (Costo $0)
 
 - **Frontend & Hosting**: Next.js (App Router) desplegado en Vercel. SEO optimizado.
 - **Base de Datos & Auth**: Supabase (PostgreSQL). Auth integrado.
@@ -10,7 +10,7 @@ Este es el repositorio oficial del proyecto **Comparacolegios**. Una plataforma 
 - **Imágenes**: Cloudinary (Capa gratuita).
 - **Estilos**: Tailwind CSS con diseño moderno "Premium".
 
-## 🏛 Arquitectura de Datos
+## Arquitectura de Datos
 
 El núcleo del sistema reside en PostgreSQL (Supabase). Usaremos terminología en español para las entidades de dominio.
 
@@ -25,7 +25,7 @@ El núcleo del sistema reside en PostgreSQL (Supabase). Usaremos terminología e
    - Extendiendo la tabla `auth.users` de Supabase.
 5. **favoritos**: Relación N:M entre usuarios y colegios.
 
-## 🗺 Hoja de Ruta y Estado del Proyecto
+## Hoja de Ruta y Estado del Proyecto
 
 ### Fase 1: Cimentación (Semana 1)
 - [ ] **Configuración Inicial**: Setup de Next.js con TypeScript y Tailwind.
@@ -33,7 +33,7 @@ El núcleo del sistema reside en PostgreSQL (Supabase). Usaremos terminología e
 - [ ] **Landing Page**: Página de inicio para captación de leads.
 
 ### Fase 2: El Cerebro (Semana 2)
-- [ ] **Ingesta de Datos**: Scripts de scraping/IA para poblar `colegios`.
+- [ ] **Ingesta de Datos**: Scripts para poblar la tabla de `colegios`.
 - [ ] **Conexión Frontend-Backend**: Filtros de búsqueda conectados a SQL.
 
 ### Fase 3: Visualización (Semana 3)
@@ -44,19 +44,18 @@ El núcleo del sistema reside en PostgreSQL (Supabase). Usaremos terminología e
 - [ ] **Validación**: Beta en un distrito piloto (ej. Los Olivos).
 - [ ] **Optimización**: Índices SQL y SEO técnico.
 
-## 📝 Guía de Desarrollo para Agentes
+## Guía de Desarrollo
 
 1. **Idioma**:
    - Variables de dominio y Comentarios: **Español**.
    - Mensajes de commit y documentación: **Español**.
    - Código (keywords) y librerías: Inglés (estándar), pero nombrando variables de negocio en Español (ej. `const colegiosFiltrados = ...`).
 2. **Estilo**:
-   - Diseño "Premium", animaciones sutiles, limpio. NO placeholders, usar imágenes generadas si es necesario.
-   - Cero emojis en la comunicación con el usuario (humano).
+   - Diseño "Premium", animaciones sutiles, limpio.
 3. **Persistencia**:
-   - Actualizar este README y el archivo `task.md` al completar tareas clave.
+   - Actualizar este README al completar tareas clave.
 
-## 🛠 Instalación y Ejecución
+## Instalación y Ejecución
 
 ```bash
 # Instalar dependencias
@@ -66,6 +65,6 @@ npm install
 npm run dev
 ```
 
-## 📄 Notas Adicionales
+## Notas Adicionales
 - El proyecto debe mantener una estética de alta calidad visual para generar confianza.
 - La optimización SEO es prioridad alta.
