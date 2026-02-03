@@ -369,33 +369,34 @@ function SearchResults() {
 
                                 {/* Mini Mapa - Solo desktop si hay coordenadas */}
                                 <div className="hidden lg:block w-56 border-l border-gray-100 bg-slate-50 relative group/map">
-                                    try {
+                                    {(() => {
+                                        try {
                                             // Manejar varios formatos de coordenadas por seguridad
                                             const clean = school.coordenadas?.replace(/[()]/g, '') || "";
-                                    const parts = clean.split(',');
-                                    if (parts.length === 2) {
+                                            const parts = clean.split(',');
+                                            if (parts.length === 2) {
                                                 const lat = parseFloat(parts[0]);
-                                    const lng = parseFloat(parts[1]);
-                                    if (!isNaN(lat) && !isNaN(lng)) {
+                                                const lng = parseFloat(parts[1]);
+                                                if (!isNaN(lat) && !isNaN(lng)) {
                                                     return (
-                                    <>
-                                        <div className="absolute inset-0 z-0">
-                                            <SchoolMiniMap coords={[lat, lng]} />
-                                        </div>
-                                        <div className="absolute inset-x-0 bottom-0 p-2 bg-gradient-to-t from-black/50 to-transparent pointer-events-none">
-                                            <p className="text-white text-[10px] text-center font-medium">Ver en mapa grande</p>
-                                        </div>
-                                    </>
-                                    )
+                                                        <>
+                                                            <div className="absolute inset-0 z-0">
+                                                                <SchoolMiniMap coords={[lat, lng]} />
+                                                            </div>
+                                                            <div className="absolute inset-x-0 bottom-0 p-2 bg-gradient-to-t from-black/50 to-transparent pointer-events-none">
+                                                                <p className="text-white text-[10px] text-center font-medium">Ver en mapa grande</p>
+                                                            </div>
+                                                        </>
+                                                    )
                                                 }
                                             }
                                         } catch { }
-                                    return (
-                                    <div className="w-full h-full flex flex-col items-center justify-center text-gray-400 p-4 text-center">
-                                        <MapPin className="h-8 w-8 mb-2 opacity-50" />
-                                        <span className="text-xs">Ubicación no disponible</span>
-                                    </div>
-                                    );
+                                        return (
+                                            <div className="w-full h-full flex flex-col items-center justify-center text-gray-400 p-4 text-center">
+                                                <MapPin className="h-8 w-8 mb-2 opacity-50" />
+                                                <span className="text-xs">Ubicación no disponible</span>
+                                            </div>
+                                        );
                                     })()}
                                 </div>
                             </div>
